@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  /* COLORS */
+  /* dark */
+  --dark-0: #000000;
+  --dark-1: #111111;
+  --dark-2: #222222;
+  --dark-3: #333333;
+  /* light */
+  --light-0: #ffffff;
+  --light-1: #f5f5f5;
+  --light-2: #eeeeee;
+  --light-3: #dddddd;
+  /* gray */
+  --gray-0: #cccccc;
+  --gray-1: #bbbbbb;
+  --gray-2: #aaaaaa;
+  --gray-3: #999999;
+  --gray-4: #666666;
+  --gray-5: #555555;
+  /* primary */
+  --primary-0: #179fa2;
+  --primary-1: #0e8486;
+  /* secondary */
+  --secondary-0: #ffcc00;
+  --secondary-1: #d1a700;
+
+  /* SPACES */
+  --space: 32px;
+  --space-small: 16px;
+  --space-large: 64px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+::selection {
+  background: var(--primary-0);
+  color: var(--light-1);
+  text-shadow: none;
+}
+
+/* style */
+html,
+body {
+  background-color: var(--dark-2);
+  overflow-x: hidden;
+  font-size: 16px;
+  color: var(--light-1);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-1);
+}
+a:hover {
+  color: var(--light-3);
+}
+
+a,
+button,
+li,
+header,
+footer {
+  transition: 0.5s all;
+}
+
+header:hover,
+footer:hover {
+  background-color: var(--dark-0);
+}
+
+p {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.btn {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--primary-0);
+  padding: 0.25em 1em;
+  display: inline-block;
+  border-radius: 3px;
+  color: var(--light-0);
+  text-align: center;
+}
+.btn:hover {
+  color: var(--light-0);
+  background-color: var(--secondary-1);
+  outline: none;
+}
+.btn:focus {
+  outline: none;
+}
+.btn-lg {
+  font-size: 1.5em;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--dark-3);
+  color: var(--light-2);
+}
+.btn-outline:hover {
+  background-color: transparent;
+  border-color: var(--primary-0);
+}
+
+header {
+  background-color: var(--dark-1);
+  padding: 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+}
+header hgroup {
+  margin-left: 0.5em;
+  text-align: left;
+}
+header hgroup h1 {
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+header hgroup h2 {
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  color: var(--light-3);
+  font-weight: 400;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-link {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.photo {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.flags {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.flags li {
+  margin-left: 8px;
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+.flags li.active {
+  opacity: 1;
+  filter: grayscale(0);
+}
+.flags li:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+.flags a {
+  display: block;
+}
+.flags img {
+  width: 15px;
+  height: 15px;
+}
+
+main {
+  padding: 9em 2em 4em 2em;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#resume h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.25em 0 0.75em 0;
+}
+#resume .text a {
+  color: var(--primary-0);
+}
+.btn-cv {
+  display: none !important;
+}
+.pt-br .btn-cv{
+  margin: 2em auto;
+  display: table !important;
+}
+
+#social ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#social li {
+  list-style: none;
+  width: auto;
+  margin: 1em;
+  font-size: 0.75em;
+}
+#social a {
+  display: block;
+}
+
+footer {
+  background-color: var(--dark-1);
+  padding: 0.5em 1em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.85em;
+}
+
+@media (min-width: 767px) {
+  header hgroup h1 {
+    font-size: 1.25em;
+  }
+}
