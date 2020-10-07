@@ -128,21 +128,13 @@ header {
   position: fixed;
   text-align: center;
 }
-header hgroup {
+
+header h1 {
   margin-left: 0.5em;
-  text-align: left;
-}
-header hgroup h1 {
-  font-size: 0.85em;
+  font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-}
-header hgroup h2 {
-  font-size: 0.75em;
-  letter-spacing: 0.1em;
-  color: var(--light-3);
-  font-weight: 400;
 }
 
 .logo {
@@ -242,7 +234,7 @@ footer {
 }
 
 @media (min-width: 767px) {
-  header hgroup h1 {
+  header h1 {
     font-size: 1.25em;
   }
 }
