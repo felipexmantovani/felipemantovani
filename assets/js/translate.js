@@ -16,8 +16,9 @@ function initApp(language) {
   let languageCurrent = storageGetLanguage() ? storageGetLanguage() : language;
   if (window.location.pathname) {
     const STRING_REPLACE = isProd() ? '/site/' : '/';
-    languageCurrent = window.location.pathname.replaceAll(STRING_REPLACE, '') || DEFAULT_LANGUAGE;
+    languageCurrent = window.location.pathname.replace(STRING_REPLACE, '') || DEFAULT_LANGUAGE;
   }
+  languageCurrent = languageCurrent.replaceAll('/', '');
   storageSetLanguage(languageCurrent);
   redirectToCurrentLanguage(languageCurrent);
   setActiveFlag(languageCurrent);
