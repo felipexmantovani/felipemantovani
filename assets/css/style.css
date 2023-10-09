@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&display=swap');
 
 html {
   /* COLORS */
@@ -42,7 +42,7 @@ html {
   border: 0;
   font-weight: 400;
   box-sizing: border-box;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
 }
 
 ::selection {
@@ -58,7 +58,7 @@ body {
   overflow-x: hidden;
   font-size: 16px;
   color: var(--light-1);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 a {
@@ -159,9 +159,9 @@ header h1 {
   display: flex;
   align-items: center;
   z-index: 10;
+  gap: 8px;
 }
 .flags li {
-  margin-left: 8px;
   opacity: 0.5;
   filter: grayscale(50%);
 }
@@ -174,7 +174,9 @@ header h1 {
   filter: grayscale(0);
 }
 .flags a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flags img {
   width: 15px;
@@ -183,7 +185,7 @@ header h1 {
 
 main {
   padding: 9em 2em 4em 2em;
-  max-width: 520px;
+  max-width: 710px;
   margin: 0 auto;
 }
 
@@ -193,6 +195,9 @@ main {
   font-size: 2em;
   font-weight: 700;
   padding: 0.25em 0 0.75em 0;
+}
+#resume .text p {
+  text-align: justify;
 }
 #resume .text a {
   color: var(--primary-0);
@@ -230,7 +235,10 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  font-size: 0.85em;
+}
+footer em {
+  font-size: 0.75em;
+  font-style: normal;
 }
 
 @media (min-width: 767px) {
