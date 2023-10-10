@@ -1,8 +1,11 @@
+const URL_PROD = 'https://felipexmantovani.github.io';
+const URL_LOCAL = 'http://127.0.0.1:8080';
+
 function isProd() {
-  return window.location.href.startsWith('https://felipexmantovani.github.io');
+  return window.location.href.startsWith(URL_PROD);
 }
 
-const URL_APP = isProd() ? 'https://felipexmantovani.github.io/site' : 'http://127.0.0.1:8080';
+const URL_APP = isProd() ? `${URL_PROD}/site` : URL_LOCAL;
 const LANGUAGES = {
   'pt-BR': 'pt-BR',
   'en-US': 'en-US',
@@ -13,15 +16,15 @@ const DEFAULT_LANGUAGE = LANGUAGES['en-US'];
 const STORAGE_LANGUAGE = 'currentLanguage';
 
 function initApp(language) {
-  let languageCurrent = storageGetLanguage() ? storageGetLanguage() : language;
+  let currentLanguage = storageGetLanguage() ? storageGetLanguage() : language;
   if (window.location.pathname) {
     const STRING_REPLACE = isProd() ? '/site/' : '/';
-    languageCurrent = window.location.pathname.replace(STRING_REPLACE, '') || DEFAULT_LANGUAGE;
+    currentLanguage = window.location.pathname.replace(STRING_REPLACE, '') || DEFAULT_LANGUAGE;
   }
-  languageCurrent = languageCurrent.replaceAll('/', '');
-  storageSetLanguage(languageCurrent);
-  redirectToCurrentLanguage(languageCurrent);
-  setActiveFlag(languageCurrent);
+  currentLanguage = currentLanguage.replaceAll('/', '');
+  storageSetLanguage(currentLanguage);
+  redirectToCurrentLanguage(currentLanguage);
+  setActiveFlag(currentLanguage);
 }
 
 function storageSetLanguage(language) {
